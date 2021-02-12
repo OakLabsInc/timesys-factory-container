@@ -1,0 +1,5 @@
+deb mirror://mirrors.ubuntu.com/mirrors.txt precise main restricted universe
+deb mirror://mirrors.ubuntu.com/mirrors.txt precise-updates main restricted universe
+deb mirror://mirrors.ubuntu.com/mirrors.txt precise-backports main restricted universe
+deb mirror://mirrors.ubuntu.com/mirrors.txt precise-security main restricted universe
+deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main
