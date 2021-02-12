@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 # timesys host requirements
 ENV DEBIAN_FRONTEND noninteractive
@@ -6,14 +6,14 @@ RUN dpkg-reconfigure -p critical dash
 
 COPY sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --force-yes \
-        automake binutils-dev bison build-essential bzip2 ecj fastjar \
-        flex gawk gconf2 gettext gperf groff gtk-doc-tools guile-1.8 icon-naming-utils indent \
-        libc6-dev libdbus-glib-1-dev libexpat1-dev libglade2-dev libgmp3-dev libgtk2.0-bin \
-        libgtk2.0-dev libmpfr-dev libncurses5-dev libperl-dev libsdl1.2-dev libtool libusb-dev \
-        libxml-parser-perl lzop python-dev python-libxml2 ruby scons sharutils swig texinfo \
-        texlive-extra-utils texlive-latex3 unzip wget x11-xkb-utils zip zlib1g \
-        lib32ncurses5 lib32z1 lib32z1-dev libc6-dev-i386 ia32-libs sudo bc \
-        cmake libcppunit-dev gcc-4.9 g++-4.9 libprotobuf-dev
+          automake binutils-dev bison build-essential bzip2 ecj fastjar \
+          flex gawk gconf2 gettext gperf groff gtk-doc-tools icon-naming-utils indent \
+          libc6-dev libdbus-glib-1-dev libexpat1-dev libglade2-dev libgmp3-dev libgtk2.0-bin \
+          libgtk2.0-dev libmpfr-dev libncurses5-dev libperl-dev libsdl1.2-dev libssl-dev libtool libusb-dev \
+          libxml-parser-perl lzop python-dev python-libxml2 ruby scons sharutils swig texinfo \
+          texlive-extra-utils unzip wget x11-xkb-utils xfonts-utils zip zlib1g \
+          lib32ncurses5 lib32z1 lib32z1-dev libc6-dev-i386 \
+          guile-2.2 texlive-latex-extra
 
 RUN ln -sfn /bin/bash /bin/sh
 
