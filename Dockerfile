@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -y --force-yes \
           libxml-parser-perl lzop python-dev python-libxml2 ruby scons sharutils swig texinfo \
           texlive-extra-utils unzip wget x11-xkb-utils xfonts-utils zip zlib1g \
           lib32ncurses5 lib32z1 lib32z1-dev libc6-dev-i386 \
-          guile-2.2 texlive-latex-extra
-RUN apt-get update && apt-get install -y --force-yes sudo
+          guile-2.2 texlive-latex-extra sudo
 
 RUN ln -sfn /bin/bash /bin/sh
 
