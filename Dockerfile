@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN dpkg-reconfigure -p critical dash
 
-COPY sources.list /etc/apt/sources.list
+# COPY sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --force-yes \
           automake binutils-dev bison build-essential bzip2 ecj fastjar \
           flex gawk gconf2 gettext gperf groff gtk-doc-tools icon-naming-utils indent \
@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --force-yes \
           texlive-extra-utils unzip wget x11-xkb-utils xfonts-utils zip zlib1g \
           lib32ncurses5 lib32z1 lib32z1-dev libc6-dev-i386 \
           guile-2.2 texlive-latex-extra
+RUN apt-get update && apt-get install -y --force-yes sudo
 
 RUN ln -sfn /bin/bash /bin/sh
 
