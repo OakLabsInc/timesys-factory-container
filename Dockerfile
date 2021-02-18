@@ -18,9 +18,12 @@ RUN useradd --create-home --shell /bin/bash worker \
     && echo "worker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/worker \
     && chmod 0640 /etc/sudoers.d/worker
 
+RUN sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
 USER worker
 WORKDIR /home/worker/build
 
 ENV GIT_SSH_COMMAND 'ssh -i /home/worker/.ssh/id_rsa'
-ENV JAVA_HOME '/usr/'
+ENV JAVA_HOME '/usr/lib/jvm/java-8-openjdk-amd64/'
+
 CMD /bin/bash
