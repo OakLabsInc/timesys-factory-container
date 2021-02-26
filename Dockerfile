@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN dpkg-reconfigure -p critical dash
 
-RUN apt-get -y update && apt-get install -y --no-install-recommends --no-cache \
+RUN apt-get -y update && apt-get install -y --no-install-recommends \
           automake binutils-dev bison build-essential bzip2 ecj fastjar \
           flex gawk gconf2 gettext gperf groff gtk-doc-tools icon-naming-utils indent \
           libc6-dev libdbus-glib-1-dev libexpat1-dev libglade2-dev libgmp3-dev libgtk2.0-bin \
