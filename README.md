@@ -40,3 +40,9 @@ volumes:
       o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
       device: ":${PWD}"
 ```
+
+To run this file do this:
+
+``` bash
+docker-compose run factory-container
+```
